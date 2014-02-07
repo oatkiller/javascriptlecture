@@ -27,5 +27,15 @@ var handleChange = function (event) {
 	}
 };
 
+var handleClearClick = function (event) {
+	var checkedTasks = list.querySelectorAll("li.done");
+	var i = 0;
+	var length = checkedTasks.length;
+	for (; i < length; i++) {
+		checkedTasks[i].remove();
+	}
+};
+
 list.addEventListener("change",handleChange,false);
 form.addEventListener("submit",handleSubmit,false);
+clearButton.addEventListener("click",handleClearClick,false);
