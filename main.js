@@ -36,6 +36,11 @@ var handleClearClick = function (event) {
 	}
 };
 
+var handleUnload = function (event) {
+	localStorage.setItem("tasks",tasks.innerHTML);
+};
+
 list.addEventListener("change",handleChange,false);
 form.addEventListener("submit",handleSubmit,false);
 clearButton.addEventListener("click",handleClearClick,false);
+window.addEventListener("unload",handleUnload,false);
