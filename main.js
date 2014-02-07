@@ -2,6 +2,11 @@ var form = document.forms[0];
 var list = document.getElementById("tasks");
 var clearButton = document.getElementById("clear");
 
+var storedTasks = localStorage.getItem("tasks");
+if (storedTasks !== null) {
+	list.innerHTML = storedTasks;
+}
+
 var handleSubmit = function (event) {
 
 	event.preventDefault();
