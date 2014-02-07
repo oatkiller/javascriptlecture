@@ -5,6 +5,12 @@ var clearButton = document.getElementById("clear");
 var storedTasks = localStorage.getItem("tasks");
 if (storedTasks !== null) {
 	list.innerHTML = storedTasks;
+	var checkedBoxes = list.querySelectorAll("li.done input");
+	var i = 0;
+	var length = checkedBoxes.length;
+	for (; i < length; i++) {
+		checkedBoxes[i].checked = true;
+	}
 }
 
 var handleSubmit = function (event) {
