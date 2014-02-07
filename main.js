@@ -5,5 +5,6 @@ var handleSubmit = function (event) {
 	var task = document.createElement("li");
 	task.innerText = form.todo.value;
 	list.insertBefore(task,list.firstChild);
+	form.todo.value = "";
 };
 form.addEventListener("submit",handleSubmit,false);
