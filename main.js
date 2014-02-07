@@ -1,5 +1,6 @@
 var form = document.forms[0];
 var list = document.getElementById("tasks");
+var clearButton = document.getElementById("clear");
 
 var handleSubmit = function (event) {
 
